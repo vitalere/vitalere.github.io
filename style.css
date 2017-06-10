@@ -94,7 +94,7 @@ header img {
 /*** PORTFOLIO ***/
 .about-wrapper {
   background: linear-gradient(0deg, #005473, #67B0A0);
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 175px);
   display: flex;
   justify-content: center;
   align-items: center;
