@@ -181,10 +181,9 @@ header img {
   padding: 25px;
 }
 .portfolio-item img {
-  max-height: 80%;
+  object-fit: contain;
   max-width: 80%;
-  height: auto;
-  width: auto;
+  max-height: 80%;
 }
 .portfolio-item h4 {
   margin-top: 10px;
