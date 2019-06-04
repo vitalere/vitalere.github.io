@@ -16,6 +16,9 @@ html {
 a {
   text-decoration: none;
 }
+.wrapper {
+  position: relative;
+}
 .container {
   display: flex;
   max-width: 960px;
@@ -53,6 +56,7 @@ a {
 }
 /*** HEADER & NAVIGATION ***/
 .header-wrapper {
+  z-index: 2;
   background-color: #fff;
   position: fixed;
   width: 100%;
@@ -182,27 +186,27 @@ header img {
 }
 .portfolio-item img {
   object-fit: contain;
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 75%;
+  max-height: 75%;
 }
 .portfolio-item h4 {
   margin-top: 10px;
   font-size: 14px;
   line-height: 1.2em;
 }
-.modus-portfolio {
+.modus-portfolio, .celiac-portfolio {
   background-color: #fff;
   color: #5f5f5f;
 }
 .pon-portfolio {
-  background-color: #BD2741;
-  color: #fff;
+	padding: 0;
+	background: linear-gradient(90deg, #BD2741 50%, #2F2D6F 50%);
 }
-.poff-portfolio {
-  background-color: #2F2D6F;
-  color: #fff;
+.pon-portfolio img {
+	object-fit: contain;
+	max-width: 100%;
+	max-height: 100%;
 }
-
 /*** TEAM ***/
 .team-wrapper {
   min-height: calc(100vh - 175px);
@@ -324,4 +328,87 @@ footer {
   .team-module h3 {
     margin-top: 15px;
   }
+}
+
+.celiac-wrapper {
+	margin-top: 75px;
+	display: flex;
+  flex-direction: column;
+}
+.celiac-wrapper h1 {
+		font-size: 48px;
+		font-weight: bold;
+		margin-bottom: 25px;
+	}
+.celiac-wrapper h3 {
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 0.1em;
+		margin-bottom: 5px;
+}
+.celiac-wrapper p {
+  font-size: 24px;
+  line-height: 1.3em;
+  margin-bottom: 5px;
+}
+.celiac-wrapper sup {
+  vertical-align: super;
+  font-size: 0.5em;
+}
+	.celiac-wrapper li {
+		list-style: disc;
+		line-height: 1.2em;
+		font-size: 24px;
+		margin-bottom: 0.6em;
+	}
+	.celiac-wrapper p.reference {
+		font-size: 8px;
+		margin-bottom: 0px;
+  }
+  
+@media only screen and (max-width: 600px) {
+  .celiac-wrapper br {
+    display: none;
+  }
+  .celiac-wrapper h1 {
+    font-size: 7.5vw;
+    margin-bottom: 0.5em;
+  }
+  .celiac-wrapper p, li {
+    font-size: 5vw;
+  }
+}
+.problem-wrapper {
+	background: linear-gradient(15deg, #1F9AA0, #5E5B59);
+}
+.solution-wrapper {
+	border-bottom: 1px solid #fff;
+}
+.solution-container {
+	display: flex;
+	flex-direction: column;
+	padding: 50px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .problem-wrapper, .solution-wrapper {
+    padding: 0px 5%;
+  }
+  .solution-container, .problem-container {
+    padding: 25px 0px;
+  }
+}
+
+.problem-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 75px 0px;
+  color: #fff;
+}
+.problem-container h1 {
+  text-shadow: 0px 0px 1px #1F9AA0;
+}
+.problem-container ul {
+  margin-left: 25px;
 }
